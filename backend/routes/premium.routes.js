@@ -15,7 +15,7 @@ router.get("/", getpremiumice);
 router.get("/:id", getpremiumiceById);
 router.put("/:id", updatepremiumice);
 router.delete("/:id", deletepremiumice);
-router.get("/search/:query", searchpremiumice);
+router.get("/search", searchpremiumice);
 
 
 module.exports = router;
