@@ -105,4 +105,4 @@ exports.searchpremiumice = async (req, res) => {
         console.error('Error during search:', err);
         res.status(500).json({ error: 'Internal server error' });
     }
-};
+}
