@@ -44,6 +44,7 @@ app.use("/api/enquiry",require("./routes/enquiry.routes"));
 //orders
 app.use("/api/orders", require("./routes/order.routes"));
 
+
 app.use(express.static(path.join(_dirname, "/frontend/dist")));
 app.get("*", (req, res) =>
   res.sendFile(path.resolve(_dirname, "frontend", "dist", "index.html"))

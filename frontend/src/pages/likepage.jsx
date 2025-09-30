@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Publiclayout from "../layouts/publiclayout";
+import Publiclayout from "../layouts/PublicLayout";
 import ContactBg from "../images/contactbgimage.jpg";
 import Image1 from "../images/deliveryicon.png";
 import Image2 from "../images/scoopice2.png";

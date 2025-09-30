@@ -87,10 +87,11 @@ exports.getpremiumiceById = async (req, res) => {
 
 //get search items by title and description
 exports.searchpremiumice = async (req, res) => {
-   const searchTerm = req.params.query;
+    const searchTerm = req.query.q; // Using query parameter
     if (!searchTerm) {
         return res.status(400).json({ error: 'Search term is required' });
     }
+
     try {
         const results = await Model.find({
             $or: [
@@ -98,9 +99,10 @@ exports.searchpremiumice = async (req, res) => {
                 { description: { $regex: searchTerm, $options: 'i' } },
             ],
         });
+
         res.json(results);
     } catch (err) {
         console.error('Error during search:', err);
         res.status(500).json({ error: 'Internal server error' });
     }
-}
+};
