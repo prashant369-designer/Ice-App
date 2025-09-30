@@ -1,0 +1,5 @@
+# Ignore environment files
+.env
+
+# Node / React
+node_modules/
